@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlowUp Studio — Beauty & Wellness Space</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="glowup-container">
+
+    <!-- Header -->
+    <header class="glowup-header">
+      <h1 class="brand-title">GlowUp Studio</h1>
+      <p class="brand-subtitle">Welcome to your safe and cozy digital space</p>
+    </header>
+
+    <section id="task6" class="glow-card">
+      <div class="pill-badge pill-green">Glow Tracker</div>
+      <p class="section-desc">Count your completed self-care steps for today. Cannot go below zero.</p>
+      
+      <div class="tracker-box">
+        <span class="tracker-label">Completed Rituals:</span>
+        <span id="counterValue" class="tracker-number">0</span>
+      </div>
+
+      <div class="btn-group-row">
+        <button id="incBtn" type="button" class="btn btn-green">+ Increase</button>
+        <button id="decBtn" type="button" class="btn btn-purple">− Decrease</button>
+        <button id="resetBtn" type="button" class="btn btn-light">Reset</button>
+      </div>
+    </section>
+
+  
+    <section id="task7" class="glow-card">
+      <div class="pill-badge pill-purple">Sweet Note Preview</div>
+      <p class="section-desc">Type your daily affirmation or note to see live character count and preview.</p>
+
+      <div class="field-group">
+        <label for="liveInput" class="field-label">Your Affirmation</label>
+        <input type="text" id="liveInput" class="glow-input" placeholder="e.g. My skin is radiant and healthy today...">
+      </div>
+      
+      <button id="clearInputBtn" type="button" class="btn btn-light" style="margin-bottom: 15px;">Clear Note</button>
+
+      <div class="preview-bubble">
+        <span class="bubble-title">Live Preview:</span>
+        <p id="previewText" class="bubble-text">Your text will appear here</p>
+        <p class="char-count">Characters: <span id="charCount">0</span></p>
+      </div>
+    </section>
+
+    <section id="task8" class="glow-card">
+      <div class="pill-badge pill-green">Product Spotlight</div>
+      <p class="section-desc">Choose a skincare favorite to inspect its photo and beauty properties.</p>
+
+      <div class="field-group">
+        <label for="imgSelect" class="field-label">Select Essential Product</label>
+        <select id="imgSelect" class="glow-input">
+          <option value="rose_mist.jpg" 
+                  data-alt="Refreshing Rosewater Mist bottle" 
+                  data-caption="Rosewater Hydrating Mist — Soothes, calms, and balances natural pH.">
+            Rosewater Mist (Hydration)
+          </option>
+          <option value="vitamin_serum.jpg" 
+                  data-alt="Vitamin C Serum dropper bottle" 
+                  data-caption="Radiant Vitamin C Glow Serum — Defends against dullness with antioxidant boost.">
+            Vitamin C Serum (Brightening)
+          </option>
+          <option value="lavender_balm.jpg" 
+                  data-alt="Organic Lavender Night Balm jar" 
+                  data-caption="Lavender Sleep Cream — Deep nighttime moisture infused with essential oils.">
+            Lavender Sleep Balm (Calm)
+          </option>
+        </select>
+      </div>
+
+      <div class="product-preview-card">
+        <img id="displayImg" src="rose_mist.jpg" alt="Refreshing Rosewater Mist bottle" class="product-img">
+        <p id="imgCaption" class="product-caption">Rosewater Hydrating Mist — Soothes, calms, and balances natural pH.</p>
+      </div>
+    </section>
+
+    <section id="task9" class="glow-card">
+      <div class="pill-badge pill-purple">Cozy Keyboard Lounge</div>
+      <p class="section-desc">Focus the input below to test keyboard events. Press Enter to submit, Escape to reset.</p>
+
+      <div class="field-group">
+        <label for="keyInput" class="field-label">Type Key or Message</label>
+        <input type="text" id="keyInput" class="glow-input" placeholder="Click here and press any key...">
+      </div>
+
+      <div class="key-status-card">
+        <p class="status-line">Last Key Pressed: <strong id="keyStatus" class="highlight-val">None</strong></p>
+        <p class="status-line">Submitted Message (Enter): <span id="enterResult" class="highlight-text">-</span></p>
+        <small class="hint-msg">💡 Press Enter to save your note, or Escape to clear all fields.</small>
+      </div>
+    </section>
+
+    <section id="task10" class="glow-card">
+      <div class="pill-badge pill-green">Interactive Glow Card</div>
+      <p class="section-desc">Hover over this beauty card with your mouse or focus it using the Tab key.</p>
+
+      <div class="focusable-glow-card" id="focusCard" tabindex="0">
+         Cozy Self-Care Card (tabindex="0") 
+      </div>
+      <p id="cardInstruction"
